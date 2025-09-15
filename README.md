@@ -21,15 +21,8 @@ The RAG News Chatbot combines retrieval-augmented generation with real-time chat
 
 ## Architecture
 
-graph TD
-A[React Client] <--> B[Node.js Server]
-B <--> C[Google Gemini AI]
-B <--> D[OpenAI Embeddings]
-B <--> E[Pinecone Vector DB]
-B <--> F[Redis Cache]
-B <--> G[News Sources]
-A --> |Socket.IO| B
-B --> |REST API| A
+<img width="946" height="218" alt="Screenshot 2025-09-16 at 4 36 35 AM" src="https://github.com/user-attachments/assets/79357b66-605c-4d86-a2ed-d925e94e14ad" />
+
 
 **Data Flow:**
 1. User message → React UI → Socket.IO → Node.js Server
@@ -61,29 +54,11 @@ B --> |REST API| A
 
 ## Repository Structure
 
-RAG-NEWS-CHATBOT/
-├── project-root/ # Backend
-│ ├── src/
-│ │ ├── app.js # Main server entry
-│ │ ├── newsIngest.js # Article ingestion
-│ │ ├── embeddings.js # OpenAI embeddings
-│ │ ├── vectorStore.js # Pinecone operations
-│ │ ├── geminiApi.js # Gemini integration
-│ │ ├── ragChat.js # RAG pipeline
-│ │ ├── redisClient.js # Redis operations
-│ │ └── socketServer.js # WebSocket server
-│ ├── package.json
-│ └── .env.example
-│
-├── frontend/ # React app
-│ ├── src/
-│ │ ├── components/ # React components
-│ │ ├── services/ # API services
-│ │ └── styles/ # SCSS files
-│ ├── package.json
-│ └── .env.example
-│
-└── README.md
+<img width="794" height="462" alt="Screenshot 2025-09-16 at 4 37 29 AM" src="https://github.com/user-attachments/assets/547f9e39-0395-418c-9f50-a3598b18067e" />
+<img width="835" height="218" alt="Screenshot 2025-09-16 at 4 37 50 AM" src="https://github.com/user-attachments/assets/64d1b0cc-29ec-4957-84d5-729505035f90" />
+<img width="850" height="499" alt="Screenshot 2025-09-16 at 4 38 27 AM" src="https://github.com/user-attachments/assets/9693b3d3-0668-4f20-a9cf-4b80110d0fa0" />
+<img width="700" height="502" alt="Screenshot 2025-09-16 at 4 39 05 AM" src="https://github.com/user-attachments/assets/564c718d-b95c-4ebb-89ba-7e02019e3d86" />
+
 
 text
 
@@ -169,15 +144,8 @@ text
 
 ## RAG Pipeline Process
 
-flowchart LR
-A[News Articles] --> B[Text Embedding]
-B --> C[Vector Storage]
-D[User Query] --> E[Query Embedding]
-E --> F[Semantic Search]
-C --> F
-F --> G[Context Retrieval]
-G --> H[Gemini AI]
-H --> I[Response]
+<img width="843" height="171" alt="Screenshot 2025-09-16 at 4 37 04 AM" src="https://github.com/user-attachments/assets/253bca76-1830-41e5-9443-f186a10ceb86" />
+
 
 text
 
