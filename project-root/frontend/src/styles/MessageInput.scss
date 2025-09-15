@@ -1,0 +1,35 @@
+// MessageInput.scss
+.message-input {
+    .input-container {
+      display: flex;
+      background: white;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+    
+    .message-textarea {
+      flex: 1;
+      border: none;
+      padding: 1rem 1.5rem;
+      resize: none;
+      font-family: inherit;
+      
+      &:focus { outline: none; }
+    }
+    
+    .send-button {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border: none;
+      color: white;
+      padding: 1rem 1.5rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      
+      &:hover:not(:disabled) { transform: scale(1.05); }
+      &:disabled { opacity: 0.5; cursor: not-allowed; }
+    }
+  }
+  
+  
